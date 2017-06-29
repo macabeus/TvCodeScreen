@@ -1,0 +1,16 @@
+PODS:
+  - TvCodeScreen (0.1.0)
+
+DEPENDENCIES:
+  - TvCodeScreen (from `.`)
+
+EXTERNAL SOURCES:
+  TvCodeScreen:
+    :path: .
+
+SPEC CHECKSUMS:
+  TvCodeScreen: eff3a62f359f1f54632c269cba86fc643187a410
+
+PODFILE CHECKSUM: 7ba747d67bda72bb842ef076cb5e28abf569e879
+
+COCOAPODS: 1.2.1
