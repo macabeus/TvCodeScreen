@@ -5,7 +5,7 @@
 # TvCodeScreen
 Simple code screen for tvOS
 
-![](http://i.imgur.com/vPoxsNv.jpg)
+![](http://i.imgur.com/KRrcssn.png)
 
 You can download this repository and see this example app.
 
@@ -24,7 +24,7 @@ and use `pod install`.
 Create a new UIView and set `CodeInputView` as a custom class
 ![](http://i.imgur.com/o17Ts1I.png)
 
-In Attribute Inspector tab you can change the code length. The default value is 6.
+In Attribute Inspector tab you can change the code length and colors. The default code length value is 6 characters.
 
 Then, your view controller need subscriber the `CodeInputViewDelegate` protocol. For example:
 
@@ -54,7 +54,6 @@ extension ViewController: CodeInputViewDelegate {
 The function `finishTyping(codeInputView:codeText:)` is called when the user fill the code, and the parameter `codeText` is the text typed by user.
 
 # TODO
-- [ ] More customizations (colors, effects...)
 - [ ] Use dynamic type
 - [ ] Suport for letters
 
