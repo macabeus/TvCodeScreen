@@ -11,14 +11,17 @@ import UIKit
 class InputButton: UIButton {
     
     var associatedCharacter: Character
+    let backgroundFocusedColor: UIColor
     
-    init(associatedCharacter: Character, target: Any?, action: Selector?) {
+    init(associatedCharacter: Character, target: Any?, action: Selector?, labelColor: UIColor, backgroundFocusedColor: UIColor) {
+        
         self.associatedCharacter = associatedCharacter
+        self.backgroundFocusedColor = backgroundFocusedColor
         
         super.init(frame: CGRect.zero)
         
         setTitle(String(associatedCharacter), for: .normal)
-        setTitleColor(.gray, for: .normal)
+        setTitleColor(labelColor, for: .normal)
         
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 4, height: 4)
@@ -34,7 +37,7 @@ class InputButton: UIButton {
         if context.nextFocusedItem === self {
             coordinator.addCoordinatedAnimations({
                 self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-                self.backgroundColor = .white
+                self.backgroundColor = self.backgroundFocusedColor
                 self.layer.shadowOpacity = 0.2
             })
         } else {

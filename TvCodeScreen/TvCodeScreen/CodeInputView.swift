@@ -20,6 +20,10 @@ public protocol CodeInputViewDelegate {
 public class CodeInputView: UIView {
     
     @IBInspectable public var codeLength: Int = 0
+    @IBInspectable public var labelBackgroundColor: UIColor = .lightGray
+    @IBInspectable public var labelFontColor: UIColor = .black
+    @IBInspectable public var buttonBackgroundFocusedColor: UIColor = .white
+    @IBInspectable public var buttonFontColor: UIColor = .gray
     private var codeLabels: [UILabel] = []
     private var currentCharacterSlotToType = 0
     public var delegate: CodeInputViewDelegate?
@@ -46,8 +50,8 @@ public class CodeInputView: UIView {
             let label = UILabel()
             label.frame.size = CGSize(width: 110, height: 120)
             label.font = label.font.withSize(120) // todo: use dynamic type to set the size of label
-            label.backgroundColor = .lightGray
-            label.textColor = .black
+            label.backgroundColor = labelBackgroundColor
+            label.textColor = labelFontColor
             label.textAlignment = .center
             
             label.widthAnchor.constraint(equalToConstant: 80).isActive = true
@@ -105,7 +109,9 @@ public class CodeInputView: UIView {
             let button = InputButton(
                 associatedCharacter: currentSpecification.title,
                 target: currentSpecification.target,
-                action: currentSpecification.action
+                action: currentSpecification.action,
+                labelColor: buttonFontColor,
+                backgroundFocusedColor: buttonBackgroundFocusedColor
             )
             
             buttons.append(button)
