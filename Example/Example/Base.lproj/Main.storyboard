@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,32 +22,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vqy-Wi-ifI" customClass="CodeInputView" customModule="TvCodeScreen">
-                                <rect key="frame" x="85" y="211" width="1766" height="333"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="codeLength">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fao-GG-2WT">
+                                <rect key="frame" x="140" y="90" width="1640" height="900"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vqy-Wi-ifI" customClass="CodeInputView" customModule="TvCodeScreen">
+                                        <rect key="frame" x="90" y="285" width="1460" height="330"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="codeLength">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelBackgroundColor">
+                                                <color key="value" red="0.72156862745098038" green="0.396078431372549" blue="0.82352941176470584" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="labelFontColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.89662350171232874" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonFontColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="buttonBackgroundFocusedColor">
+                                                <color key="value" red="0.72156862745098038" green="0.396078431372549" blue="0.82352941176470584" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is the answer of life, universe and everything else?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-mt-7cX">
+                                        <rect key="frame" x="343" y="66" width="955" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type, please" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-8q-A1t">
+                                        <rect key="frame" x="513" y="753" width="615" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="615" id="Nna-ar-vH7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.019607843137254902" green="0.019607843137254902" blue="0.12156862745098039" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="BCn-mt-7cX" firstAttribute="top" secondItem="Fao-GG-2WT" secondAttribute="top" constant="66" id="10X-si-Cas"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vqy-Wi-ifI" secondAttribute="trailing" constant="90" id="3FY-g0-9bg"/>
+                                    <constraint firstItem="Vqy-Wi-ifI" firstAttribute="leading" secondItem="Fao-GG-2WT" secondAttribute="leading" constant="90" id="DQI-Wy-Hio"/>
+                                    <constraint firstItem="zcK-8q-A1t" firstAttribute="centerX" secondItem="Vqy-Wi-ifI" secondAttribute="centerX" id="Fz4-m2-ORF"/>
+                                    <constraint firstItem="Vqy-Wi-ifI" firstAttribute="top" secondItem="BCn-mt-7cX" secondAttribute="bottom" constant="173" id="JA6-95-Kc1"/>
+                                    <constraint firstItem="BCn-mt-7cX" firstAttribute="leading" secondItem="Fao-GG-2WT" secondAttribute="leading" constant="343" id="a0J-Jb-wVS"/>
+                                    <constraint firstAttribute="bottom" secondItem="zcK-8q-A1t" secondAttribute="bottom" constant="101" id="h4g-zM-071"/>
+                                    <constraint firstItem="zcK-8q-A1t" firstAttribute="top" secondItem="Vqy-Wi-ifI" secondAttribute="bottom" constant="138" id="jqw-sj-ZEW"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is the answer of life, universe and everything else?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-mt-7cX">
-                                <rect key="frame" x="491" y="76" width="955" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type, please" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-8q-A1t">
-                                <rect key="frame" x="662" y="597" width="615" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.062745098039215685" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Fao-GG-2WT" secondAttribute="bottom" constant="90" id="Prd-fQ-2xI"/>
+                            <constraint firstItem="Fao-GG-2WT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="120" id="TCv-vz-Jo8"/>
+                            <constraint firstItem="Fao-GG-2WT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="bRB-Jf-jvP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fao-GG-2WT" secondAttribute="trailing" constant="120" id="m9U-l1-sRv"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="labelResult" destination="zcK-8q-A1t" id="kvD-cR-h0P"/>
