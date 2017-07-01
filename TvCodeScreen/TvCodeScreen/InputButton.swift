@@ -10,7 +10,7 @@ import UIKit
 
 class InputButton: UIButton {
     
-    var associatedCharacter: Character
+    let associatedCharacter: Character
     let backgroundFocusedColor: UIColor
     
     init(associatedCharacter: Character, target: Any?, action: Selector?, labelColor: UIColor, backgroundFocusedColor: UIColor) {
