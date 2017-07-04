@@ -32,46 +32,70 @@ public class CodeInputView: UIView {
     }
     
     public override func awakeFromNib() {
-        drawComponent()
-    }
-    
-    func drawComponent() {
+        // background
         backgroundColor = .clear
         
-        ////
-        // Draw the placeholder labels
-        for _ in 0..<codeLength {
-            let label = UILabel()
-            label.frame.size = CGSize(width: 110, height: 120)
-            label.font = label.font.withSize(120) // todo: use dynamic type to set the size of label
-            label.backgroundColor = labelBackgroundColor
-            label.textColor = labelFontColor
-            label.textAlignment = .center
-            
-            label.widthAnchor.constraint(equalToConstant: 80).isActive = true
-            
-            label.text = " "
-            
-            codeLabels.append(label)
+        // add components for view
+        codeLabels = createCodeLabels(count: codeLength, labelWidth: 110, labelHeight: 120)
+        addCodeLabelsToView(codeLabels)
+        
+        let inputButtons = createNumericInputButtons()
+        addInputButtonsToView(inputButtons)
+    }
+    
+    private func addCodeLabelsToView(_ newCodeLabels: [UILabel]) {
+        let stackViewLabels = createStackViewForHorizontalElements(forViews: newCodeLabels, spacingBetweenElements: 30)
+        
+        addSubview(stackViewLabels)
+        
+        stackViewLabels.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        stackViewLabels.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        stackViewLabels.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackViewLabels.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    private func addInputButtonsToView(_ newInputButtons: [InputButton]) {
+        let stackViewInputButtons = createStackViewForHorizontalElements(forViews: newInputButtons, spacingBetweenElements: 20)
+        
+        addSubview(stackViewInputButtons)
+        
+        stackViewInputButtons.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        stackViewInputButtons.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        stackViewInputButtons.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackViewInputButtons.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    ////
+    // Placeholder labels
+    private func createCodeLabels(count: Int, labelWidth: Int, labelHeight: Int) -> [UILabel] {
+        var labels: [UILabel] = []
+        
+        for _ in 0..<count {
+            labels.append(createCodeLabel(width: labelWidth, height: labelHeight))
         }
         
-        // stackview and autolayout for the labels
-        let stackLabels = UIStackView(arrangedSubviews: codeLabels)
-        stackLabels.axis = .horizontal
-        stackLabels.distribution = .equalSpacing
-        stackLabels.alignment = .center
-        stackLabels.spacing = 30
+        return labels
+    }
+    
+    private func createCodeLabel(width: Int, height: Int) -> UILabel {
+        let label = UILabel()
+        label.frame.size = CGSize(width: width, height: height)
+        label.font = label.font.withSize(CGFloat(height)) // todo: use dynamic type to set the size of label
+        label.backgroundColor = labelBackgroundColor
+        label.textColor = labelFontColor
+        label.textAlignment = .center
         
-        addSubview(stackLabels)
-
-        stackLabels.heightAnchor.constraint(equalToConstant: 120).isActive = true
-        stackLabels.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        stackLabels.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackLabels.translatesAutoresizingMaskIntoConstraints = false
+        label.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
-        ////
-        // Draw buttons
-        enum buttonTypeNumber {
+        label.text = " "
+        
+        return label
+    }
+    
+    ////
+    // Input buttons
+    private func createNumericInputButtons() -> [InputButton] {
+        enum NumericInputButtonType {
             case pos(Int)
             
             var specification: (title: Character, target: Any, action: Selector)? {
@@ -95,8 +119,9 @@ public class CodeInputView: UIView {
         }
         
         var buttons: [InputButton] = []
+        
         for i in 0...10 {
-            guard let currentSpecification = buttonTypeNumber.pos(i).specification else {
+            guard let currentSpecification = NumericInputButtonType.pos(i).specification else {
                 continue
             }
             
@@ -111,21 +136,23 @@ public class CodeInputView: UIView {
             buttons.append(button)
         }
         
-        // stackview and autolayout for the buttons
-        let stackButtons = UIStackView(arrangedSubviews: buttons)
-        stackButtons.axis = .horizontal
-        stackButtons.distribution = .equalSpacing
-        stackButtons.alignment = .center
-        stackButtons.spacing = 20
-        
-        addSubview(stackButtons)
-        
-        stackButtons.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        stackButtons.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        stackButtons.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        stackButtons.translatesAutoresizingMaskIntoConstraints = false
+        return buttons
     }
-
+    
+    ////
+    // Stackview
+    private func createStackViewForHorizontalElements(forViews views: [UIView], spacingBetweenElements: Float) -> UIStackView {
+        let stackLabels = UIStackView(arrangedSubviews: views)
+        stackLabels.axis = .horizontal
+        stackLabels.distribution = .equalSpacing
+        stackLabels.alignment = .center
+        stackLabels.spacing = CGFloat(spacingBetweenElements)
+        
+        return stackLabels
+    }
+    
+    ////
+    // Input button actions
     func buttonTypeCharacter(_ sender: InputButton) {
         addCharacterToTheCode(character: sender.associatedCharacter)
     }
@@ -137,7 +164,7 @@ public class CodeInputView: UIView {
     /**
      Add a character to the code
      */
-    func addCharacterToTheCode(character: Character) {
+    private func addCharacterToTheCode(character: Character) {
         if currentCharacterSlotToType == codeLength {
             return
         }
@@ -153,7 +180,7 @@ public class CodeInputView: UIView {
     /**
      Remove the last character in the code
      */
-    func removeCharacterToTheCode() {
+    private func removeCharacterToTheCode() {
         if currentCharacterSlotToType == 0 {
             return
         }
