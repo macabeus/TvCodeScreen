@@ -19,7 +19,7 @@ public protocol CodeInputViewDelegate {
 
 public class CodeInputView: UIView {
     
-    @IBInspectable public var codeLength: Int = 0
+    @IBInspectable public var codeLength: Int = 6
     @IBInspectable public var labelBackgroundColor: UIColor = .lightGray
     @IBInspectable public var labelFontColor: UIColor = .black
     @IBInspectable public var buttonBackgroundFocusedColor: UIColor = .white
@@ -32,12 +32,6 @@ public class CodeInputView: UIView {
     }
     
     public override func awakeFromNib() {
-        // set the default value for code length
-        if codeLength <= 0 {
-            codeLength = 6
-        }
-        
-        //
         drawComponent()
     }
     
