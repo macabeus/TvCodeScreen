@@ -8,23 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		53E064BA1548E106C38DBAF2 /* Pods_TvCodeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1159F1EA7E9F3D6C55C7DD87 /* Pods_TvCodeScreen.framework */; };
+		8948CCA81F0B3CAD003B9D27 /* TvCodeScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8948CCA71F0B3CAD003B9D27 /* TvCodeScreenTests.swift */; };
+		8948CCAA1F0B3CAD003B9D27 /* TvCodeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 898A569C1F03D07E008302AD /* TvCodeScreen.framework */; };
 		8960AD8E1F04D38B00606CFD /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8960AD8D1F04D38B00606CFD /* InputButton.swift */; };
 		898A56C31F03D0ED008302AD /* CodeInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 898A56C21F03D0ED008302AD /* CodeInputView.swift */; };
 		89EAF50B1F04E27500F8B808 /* TvCodeScreen.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 89EAF50A1F04E27500F8B808 /* TvCodeScreen.podspec */; };
+		98928CF068BEC06E5EA2B4D5 /* Pods_TvCodeScreen_TvCodeScreenTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A45F5C58650AED6CB247281 /* Pods_TvCodeScreen_TvCodeScreenTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8948CCAB1F0B3CAD003B9D27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 898A56931F03D07E008302AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 898A569B1F03D07E008302AD;
+			remoteInfo = TvCodeScreen;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1159F1EA7E9F3D6C55C7DD87 /* Pods_TvCodeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvCodeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A45F5C58650AED6CB247281 /* Pods_TvCodeScreen_TvCodeScreenTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TvCodeScreen_TvCodeScreenTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAA560DC6EA3294A030A08E /* Pods-TvCodeScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvCodeScreen.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TvCodeScreen/Pods-TvCodeScreen.debug.xcconfig"; sourceTree = "<group>"; };
+		8948CCA51F0B3CAD003B9D27 /* TvCodeScreenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TvCodeScreenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8948CCA71F0B3CAD003B9D27 /* TvCodeScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TvCodeScreenTests.swift; sourceTree = "<group>"; };
+		8948CCA91F0B3CAD003B9D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8960AD8D1F04D38B00606CFD /* InputButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
 		898A569C1F03D07E008302AD /* TvCodeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TvCodeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		898A56A01F03D07E008302AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		898A56C21F03D0ED008302AD /* CodeInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeInputView.swift; sourceTree = "<group>"; };
 		89EAF50A1F04E27500F8B808 /* TvCodeScreen.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = TvCodeScreen.podspec; path = ../TvCodeScreen.podspec; sourceTree = "<group>"; };
+		BF79931847E3334C1B94251A /* Pods-TvCodeScreen-TvCodeScreenTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvCodeScreen-TvCodeScreenTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TvCodeScreen-TvCodeScreenTests/Pods-TvCodeScreen-TvCodeScreenTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0AD5AEA671F1505523C1815 /* Pods-TvCodeScreen-TvCodeScreenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvCodeScreen-TvCodeScreenTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-TvCodeScreen-TvCodeScreenTests/Pods-TvCodeScreen-TvCodeScreenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C646A6776931639AA892AD30 /* Pods-TvCodeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TvCodeScreen.release.xcconfig"; path = "../Pods/Target Support Files/Pods-TvCodeScreen/Pods-TvCodeScreen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8948CCA21F0B3CAD003B9D27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8948CCAA1F0B3CAD003B9D27 /* TvCodeScreen.framework in Frameworks */,
+				98928CF068BEC06E5EA2B4D5 /* Pods_TvCodeScreen_TvCodeScreenTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898A56981F03D07E008302AD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -40,8 +68,18 @@
 			isa = PBXGroup;
 			children = (
 				1159F1EA7E9F3D6C55C7DD87 /* Pods_TvCodeScreen.framework */,
+				3A45F5C58650AED6CB247281 /* Pods_TvCodeScreen_TvCodeScreenTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8948CCA61F0B3CAD003B9D27 /* TvCodeScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				8948CCA71F0B3CAD003B9D27 /* TvCodeScreenTests.swift */,
+				8948CCA91F0B3CAD003B9D27 /* Info.plist */,
+			);
+			path = TvCodeScreenTests;
 			sourceTree = "<group>";
 		};
 		898A56921F03D07E008302AD = {
@@ -49,6 +87,7 @@
 			children = (
 				89EAF50A1F04E27500F8B808 /* TvCodeScreen.podspec */,
 				898A569E1F03D07E008302AD /* TvCodeScreen */,
+				8948CCA61F0B3CAD003B9D27 /* TvCodeScreenTests */,
 				898A569D1F03D07E008302AD /* Products */,
 				A09184BBDF3B1BA5E7462D02 /* Pods */,
 				2598345D538708F6B4483320 /* Frameworks */,
@@ -59,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				898A569C1F03D07E008302AD /* TvCodeScreen.framework */,
+				8948CCA51F0B3CAD003B9D27 /* TvCodeScreenTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +118,8 @@
 			children = (
 				7BAA560DC6EA3294A030A08E /* Pods-TvCodeScreen.debug.xcconfig */,
 				C646A6776931639AA892AD30 /* Pods-TvCodeScreen.release.xcconfig */,
+				C0AD5AEA671F1505523C1815 /* Pods-TvCodeScreen-TvCodeScreenTests.debug.xcconfig */,
+				BF79931847E3334C1B94251A /* Pods-TvCodeScreen-TvCodeScreenTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,6 +137,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8948CCA41F0B3CAD003B9D27 /* TvCodeScreenTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8948CCAF1F0B3CAD003B9D27 /* Build configuration list for PBXNativeTarget "TvCodeScreenTests" */;
+			buildPhases = (
+				6DA5F2B450A7C80E67AE296D /* [CP] Check Pods Manifest.lock */,
+				8948CCA11F0B3CAD003B9D27 /* Sources */,
+				8948CCA21F0B3CAD003B9D27 /* Frameworks */,
+				8948CCA31F0B3CAD003B9D27 /* Resources */,
+				3A52B767DCF77B9FF83D309F /* [CP] Embed Pods Frameworks */,
+				789342C52893B3EF83B38525 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8948CCAC1F0B3CAD003B9D27 /* PBXTargetDependency */,
+			);
+			name = TvCodeScreenTests;
+			productName = TvCodeScreenTests;
+			productReference = 8948CCA51F0B3CAD003B9D27 /* TvCodeScreenTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		898A569B1F03D07E008302AD /* TvCodeScreen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 898A56A41F03D07E008302AD /* Build configuration list for PBXNativeTarget "TvCodeScreen" */;
@@ -121,9 +184,15 @@
 		898A56931F03D07E008302AD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Bruno Macabeus Aquino";
 				TargetAttributes = {
+					8948CCA41F0B3CAD003B9D27 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 56KUK57QCP;
+						ProvisioningStyle = Automatic;
+					};
 					898A569B1F03D07E008302AD = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 56KUK57QCP;
@@ -145,11 +214,19 @@
 			projectRoot = "";
 			targets = (
 				898A569B1F03D07E008302AD /* TvCodeScreen */,
+				8948CCA41F0B3CAD003B9D27 /* TvCodeScreenTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8948CCA31F0B3CAD003B9D27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898A569A1F03D07E008302AD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -161,6 +238,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A52B767DCF77B9FF83D309F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TvCodeScreen-TvCodeScreenTests/Pods-TvCodeScreen-TvCodeScreenTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		46B63D4195A07D41F31F196E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +266,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6DA5F2B450A7C80E67AE296D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		789342C52893B3EF83B38525 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-TvCodeScreen-TvCodeScreenTests/Pods-TvCodeScreen-TvCodeScreenTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AB2CBF5A1D1A434C77915C3B /* [CP] Copy Pods Resources */ = {
@@ -194,6 +316,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8948CCA11F0B3CAD003B9D27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8948CCA81F0B3CAD003B9D27 /* TvCodeScreenTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		898A56971F03D07E008302AD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -205,7 +335,41 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8948CCAC1F0B3CAD003B9D27 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 898A569B1F03D07E008302AD /* TvCodeScreen */;
+			targetProxy = 8948CCAB1F0B3CAD003B9D27 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8948CCAD1F0B3CAD003B9D27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0AD5AEA671F1505523C1815 /* Pods-TvCodeScreen-TvCodeScreenTests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 56KUK57QCP;
+				INFOPLIST_FILE = TvCodeScreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = macabeus.TvCodeScreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8948CCAE1F0B3CAD003B9D27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF79931847E3334C1B94251A /* Pods-TvCodeScreen-TvCodeScreenTests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 56KUK57QCP;
+				INFOPLIST_FILE = TvCodeScreenTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = macabeus.TvCodeScreenTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		898A56A21F03D07E008302AD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +515,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8948CCAF1F0B3CAD003B9D27 /* Build configuration list for PBXNativeTarget "TvCodeScreenTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8948CCAD1F0B3CAD003B9D27 /* Debug */,
+				8948CCAE1F0B3CAD003B9D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		898A56961F03D07E008302AD /* Build configuration list for PBXProject "TvCodeScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
