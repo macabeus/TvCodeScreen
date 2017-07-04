@@ -24,7 +24,7 @@ public class CodeInputView: UIView {
     @IBInspectable public var labelFontColor: UIColor = .black
     @IBInspectable public var buttonBackgroundFocusedColor: UIColor = .white
     @IBInspectable public var buttonFontColor: UIColor = .gray
-    private var codeLabels: [UILabel] = []
+    internal var codeLabels: [UILabel] = []
     private var currentCharacterSlotToType = 0
     public var delegate: CodeInputViewDelegate?
     public var codeText: String {
@@ -104,7 +104,7 @@ public class CodeInputView: UIView {
     
     ////
     // Input buttons
-    private func createNumericInputButtons() -> [InputButton] {
+    internal func createNumericInputButtons() -> [InputButton] {
         enum NumericInputButtonType {
             case pos(Int)
             
@@ -181,7 +181,7 @@ public class CodeInputView: UIView {
     /**
      Add a character to the code
      */
-    private func addCharacterToTheCode(character: Character) {
+    internal func addCharacterToTheCode(character: Character) {
         if currentCharacterSlotToType == codeLength {
             return
         }
@@ -197,7 +197,7 @@ public class CodeInputView: UIView {
     /**
      Remove the last character in the code
      */
-    private func removeCharacterToTheCode() {
+    internal func removeCharacterToTheCode() {
         if currentCharacterSlotToType == 0 {
             return
         }
