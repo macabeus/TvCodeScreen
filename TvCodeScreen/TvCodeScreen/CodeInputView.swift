@@ -43,6 +43,11 @@ public class CodeInputView: UIView {
         addInputButtonsToView(inputButtons)
     }
     
+    /**
+     Add to view the code labels passed as parameters, arranging and setting the auto layout
+     
+     - parameter newCodeLabels: new code labels to add in view
+     */
     private func addCodeLabelsToView(_ newCodeLabels: [UILabel]) {
         let stackViewLabels = createStackViewForHorizontalElements(forViews: newCodeLabels, spacingBetweenElements: 30)
         
@@ -54,6 +59,11 @@ public class CodeInputView: UIView {
         stackViewLabels.translatesAutoresizingMaskIntoConstraints = false
     }
     
+    /**
+     Add to view the input buttons passed as parameters, arranging and setting the auto layout
+     
+     - parameter newInputButtons: new input buttons to add in view
+     */
     private func addInputButtonsToView(_ newInputButtons: [InputButton]) {
         let stackViewInputButtons = createStackViewForHorizontalElements(forViews: newInputButtons, spacingBetweenElements: 20)
         
@@ -141,6 +151,13 @@ public class CodeInputView: UIView {
     
     ////
     // Stackview
+    
+    /**
+     Arrange a array of views horizontaly in one stackView
+     
+     - parameter forViews views: views to add in this new stackView
+     - parameter spacingBetweenElements: spacament between one view and the next view in this new stackView
+     */
     private func createStackViewForHorizontalElements(forViews views: [UIView], spacingBetweenElements: Float) -> UIStackView {
         let stackLabels = UIStackView(arrangedSubviews: views)
         stackLabels.axis = .horizontal
