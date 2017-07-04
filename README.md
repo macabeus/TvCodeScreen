@@ -1,6 +1,9 @@
 [![Version](https://img.shields.io/cocoapods/v/TvCodeScreen.svg?style=flat)](http://cocoapods.org/pods/TvCodeScreen)
 [![License](https://img.shields.io/cocoapods/l/TvCodeScreen.svg?style=flat)](http://cocoapods.org/pods/TvCodeScreen)
 [![Platform](https://img.shields.io/cocoapods/p/TvCodeScreen.svg?style=flat)](http://cocoapods.org/pods/TvCodeScreen)
+[![Build Status](https://travis-ci.org/getstalkr/TvCodeScreen.svg)](https://travis-ci.org/getstalkr/TvCodeScreen)
+[![codecov.io](https://codecov.io/gh/getstalkr/TvCodeScreen/branch/master/graphs/badge.svg)](https://codecov.io/gh/getstalkr/TvCodeScreen/branch/master)
+
 
 # TvCodeScreen
 Simple code screen for tvOS
