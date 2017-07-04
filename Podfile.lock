@@ -1,7 +1,11 @@
 PODS:
-  - TvCodeScreen (0.1.0)
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
+  - TvCodeScreen (0.1.1)
 
 DEPENDENCIES:
+  - Nimble
+  - Quick
   - TvCodeScreen (from `.`)
 
 EXTERNAL SOURCES:
@@ -9,8 +13,10 @@ EXTERNAL SOURCES:
     :path: .
 
 SPEC CHECKSUMS:
-  TvCodeScreen: eff3a62f359f1f54632c269cba86fc643187a410
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
+  TvCodeScreen: a54e83288e3a56275b8edca83246e2e6ddcb494f
 
-PODFILE CHECKSUM: 7ba747d67bda72bb842ef076cb5e28abf569e879
+PODFILE CHECKSUM: ec1076d914698d20daea773c7109b35c100ef870
 
 COCOAPODS: 1.2.1
