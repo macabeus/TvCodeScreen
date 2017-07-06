@@ -27,6 +27,11 @@ class InputButton: UIButton {
         layer.shadowOffset = CGSize(width: 4, height: 4)
         layer.shadowRadius = 5
         
+        layer.masksToBounds = true
+        layer.cornerRadius = 3
+        layer.borderWidth = 3
+        layer.borderColor = UIColor.clear.cgColor
+        
         if let target = target, let action = action {
             addTarget(target, action: action, for: .primaryActionTriggered)
         }

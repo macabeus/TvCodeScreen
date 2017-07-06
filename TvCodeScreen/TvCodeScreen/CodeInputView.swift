@@ -95,6 +95,11 @@ public class CodeInputView: UIView {
         label.textColor = labelFontColor
         label.textAlignment = .center
         
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 5
+        label.layer.borderWidth = 5
+        label.layer.borderColor = UIColor.clear.cgColor
+        
         label.widthAnchor.constraint(equalToConstant: 80).isActive = true
         
         label.text = " "
